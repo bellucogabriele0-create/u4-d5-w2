@@ -4,8 +4,8 @@ public class GiochiDaTavolo extends Gioco {
     private int NumeroDiGiocatori;
     private int DurataMediaDiUnaPartita;
 
-    public GiochiDaTavolo(String titolo, int annoPubblicazione, double prezzo) {
-        super(titolo, annoPubblicazione, prezzo);
+    public GiochiDaTavolo(int DurataMediaDiUnaPartita, int NumeroDiGiocatori, int id, String titolo, int annoPubblicazione, double prezzo) {
+        super(id, titolo, annoPubblicazione, prezzo);
         this.DurataMediaDiUnaPartita = DurataMediaDiUnaPartita;
         this.NumeroDiGiocatori = NumeroDiGiocatori;
     }
@@ -18,9 +18,10 @@ public class GiochiDaTavolo extends Gioco {
         return DurataMediaDiUnaPartita;
     }
 
+
     @Override
     public String toString() {
-        return "GiochiDaTavolo{" +
+        return super.toString() + " GiochiDaTavolo{" +
                 "NumeroDiGiocatori=" + NumeroDiGiocatori +
                 ", DurataMediaDiUnaPartita=" + DurataMediaDiUnaPartita +
                 '}';

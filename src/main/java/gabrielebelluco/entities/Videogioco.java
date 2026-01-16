@@ -5,8 +5,8 @@ public class Videogioco extends Gioco {
     private int durataDiGioco;
     private Genere genere;
 
-    public Videogioco(int id, String titolo, int annoPubblicazione, double prezzo) {
-        super(titolo, annoPubblicazione, prezzo);
+    public Videogioco(String piattaforma, int durataDiGioco, Genere genere, int id, String titolo, int annoPubblicazione, double prezzo) {
+        super(id, titolo, annoPubblicazione, prezzo);
         this.piattaforma = piattaforma;
         this.durataDiGioco = durataDiGioco;
         this.genere = genere;
@@ -25,9 +25,10 @@ public class Videogioco extends Gioco {
         return genere;
     }
 
+
     @Override
     public String toString() {
-        return "Videogioco{" +
+        return super.toString() + " Videogioco{" +
                 "piattaforma='" + piattaforma + '\'' +
                 ", durataDiGioco=" + durataDiGioco +
                 ", genere=" + genere +
