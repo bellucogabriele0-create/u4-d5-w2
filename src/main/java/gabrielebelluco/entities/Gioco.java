@@ -1,20 +1,23 @@
 package gabrielebelluco.entities;
 
-import java.util.Random;
-
 public abstract class Gioco {
-    private long id;
+    private int id;
     private String titolo;
     private int annoPubblicazione;
     private double prezzo;
 
     public Gioco(String titolo, int annoPubblicazione, double prezzo) {
-        Random rndm = new Random();
-        this.prezzo = rndm.nextLong();
+        this.id = id;
+        this.prezzo = prezzo;
         this.titolo = titolo;
         this.annoPubblicazione = annoPubblicazione;
-        this.prezzo = prezzo;
+
+
+        if (prezzo <= 0)
+            System.out.println("il prezzo deve essere maggiore di 0");
+
     }
+
 
     public double getPrezzo() {
         return prezzo;

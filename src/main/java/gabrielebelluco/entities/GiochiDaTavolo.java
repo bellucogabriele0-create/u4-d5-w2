@@ -17,4 +17,12 @@ public class GiochiDaTavolo extends Gioco {
     public int getDurataMediaDiUnaPartita() {
         return DurataMediaDiUnaPartita;
     }
+
+    @Override
+    public String toString() {
+        return "GiochiDaTavolo{" +
+                "NumeroDiGiocatori=" + NumeroDiGiocatori +
+                ", DurataMediaDiUnaPartita=" + DurataMediaDiUnaPartita +
+                '}';
+    }
 }
