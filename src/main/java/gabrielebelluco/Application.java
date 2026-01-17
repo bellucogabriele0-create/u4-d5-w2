@@ -42,7 +42,7 @@ public class Application {
                 case 4 -> ricercaPerPrezzo(scanner, collezione);
                 case 5 -> ricercaPerNumeroGiocatori(scanner, collezione);
                 case 6 -> rimuoviPerId(scanner, collezione);
-                case 7 -> collezione.;
+                case 7 -> collezione.Statistiche();
                 case 8 -> aggiornaGioco(scanner, collezione);
                 case 0 -> {
                     dalloScanner = false;
@@ -73,7 +73,7 @@ public class Application {
 
             Videogioco videogioco = new Videogioco(piattaforma, durata, genere, id, titolo, anno, prezzo);
             collezione.addGioco(videogioco);
-        } catch (ValidationException | IllegalArgumentException e) {
+        } catch (Exception e) {
             System.out.println("errore: " + e.getMessage());
         }
     }
@@ -95,7 +95,7 @@ public class Application {
 
             GiochiDaTavolo tavolo = new GiochiDaTavolo(durataPartita, numGiocatori, id, titolo, anno, prezzo);
             collezione.addGioco(tavolo);
-        } catch (ValidationException | NumberFormatException e) {
+        } catch (Exception e) {
             System.out.println("errore: " + e.getMessage());
         }
     }

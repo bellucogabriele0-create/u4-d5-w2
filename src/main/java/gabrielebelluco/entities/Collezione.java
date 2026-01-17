@@ -58,7 +58,7 @@ public class Collezione {
         }
     }
 
-    public St statistiche() {
+    public void Statistiche() {
         long numeroVideogiochi = giochi.stream().filter(g -> g instanceof Videogioco).count();
         System.out.println("numero videogiochi: " + numeroVideogiochi);
 
